@@ -34,7 +34,7 @@ corpus <- tm_map(corpus, removeNumbers)
 corpus <- tm_map(corpus, removePunctuation)
 corpus <- tm_map(corpus, content_transformer(tolower))
 
-stoplistFile <- paste(inputDir, '\\', 'stopwords_pl.txt')
+stoplistFile <- paste(inputDir, '\\', 'stopwords_pl.txt', sep='')
 stopList <- readLines(
   stoplistFile,
   encoding = 'UTF-8'
