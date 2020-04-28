@@ -8,7 +8,6 @@ setwd(workDir)
 #define project folders
 inputDir <- '.\\data'
 outputDir  <- '.\\results'
-scriptsDir <- '.\\scripts'
 workspaceDir <- '.\\workspace'
 
 #create output folder
@@ -95,12 +94,12 @@ tdmTfIdfBoundsMatrix <- as.matrix(tdmTfIdfBounds)
 dtmTfIdfBoundsMatrix <- as.matrix(dtmTfIdfBounds)
 
 #eksport macierzy do pliku .csv
-#matrixFile <- paste(
-#  outputDir,
-#  '\\',
-#  'tdmTfIdfBounds.csv',
-#  sep = ''
-#)
+matrixFile <- paste(
+  outputDir,
+  '\\',
+  'tdmTfIdfBounds.csv',
+  sep = ''
+)
 
 write.table(
   tdmTfIdfBoundsMatrix,
