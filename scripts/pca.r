@@ -64,14 +64,14 @@ plot(
   xlab='Współrzędna syntetyczna 1', 
   ylab='Współrzędna syntetyczna 2',
   main='Analiza głownych składowych', 
-  col='orange'
+  col='red'
 )
 text(
   x, 
   y, 
   labels = paste('d', 1:length(rownames(dtmTfIdfBoundsMatrix)), sep = ''),
   pos = 3,
-  col = 'orange'
+  col = 'red'
 )
-legend('bottom', legend, cex=.65, text.col = 'orange' )
+legend('bottom', legend, cex=.65, text.col = 'black' )
 dev.off()

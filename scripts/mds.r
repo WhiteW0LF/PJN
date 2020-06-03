@@ -65,14 +65,14 @@ plot(
   xlab='Wspolrzedna syntetyczna 1',
   ylab='Wspolrzedna syntetyczna 2',
   main='Skalowanie wielowymiarowe',
-  col='orange'
+  col='red'
 )
 text(
   x,
   y,
   labels = paste('d', 1:length(rownames(dtmTfIdfBoundsMatrix)),sep = ''), 
   pos = 3,
-  col = 'orange'
+  col = 'red'
 )
-legend('bottom', legend, cex=.65, text.col = 'orange')
+legend('bottom', legend, cex=.65, text.col = 'black')
 dev.off()

@@ -19,7 +19,7 @@ dir.create(workspaceDir, showWarnings = FALSE)
 corpusDir <- paste(
   inputDir,
   '\\',
-  'Literatura - streszczenia - preprocessed',
+  'ksiazki - przetworzone',
   sep = ''
 )
 
@@ -97,12 +97,12 @@ dtmTfIdfBoundsMatrix <- as.matrix(dtmTfIdfBounds)
 matrixFile <- paste(
   outputDir,
   '\\',
-  'tdmTfIdfBounds.csv',
+  'tdm_bound_2-16.csv',
   sep = ''
 )
 
 write.table(
-  tdmTfIdfBoundsMatrix,
+  dtmTfIdfBoundsMatrix,
   file = matrixFile,
   sep = ';',
   dec = ',',

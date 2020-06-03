@@ -19,7 +19,7 @@ dir.create(workspaceDir, showWarnings = FALSE)
 
 
 #create corpuse
-corpusDir <- paste(inputDir, '\\', 'Literatura - streszczenia - oryginal', sep = '')
+corpusDir <- paste(inputDir, '\\', 'ksiazki', sep = '')
 corpus <- VCorpus(
    DirSource(
       corpusDir,
@@ -33,7 +33,7 @@ corpus <- VCorpus(
 
 #usuniecie z tekstow podzialu na akapity
 pasteParagraphs <- content_transformer(function(text, char) paste(text, collapse = char))
-corpus <- tm_map(corpus, " ")
+corpus <- tm_map(corpus, pasteParagraphs, " ")
 
 #initial transform
 corpus <- tm_map(corpus, removeNumbers)
@@ -87,7 +87,7 @@ corpus <- tm_map(corpus, cutExtention)
 preprocessedDir <- paste(
    outputDir,
    '\\',
-   'Literatura - streszczenia - przetworzone',
+   'ksiazki - przetworzone',
    sep = ''
 )
 dir.create(preprocessedDir, showWarnings = FALSE)
